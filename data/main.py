@@ -17,7 +17,7 @@ with open('events_copy.csv', 'w', encoding='utf8') as file:
 
 '''
 user [in progress]
-speaker [in progress]
+speaker [done]
 venue [done]
 sponsor [done] 
 organization [done]

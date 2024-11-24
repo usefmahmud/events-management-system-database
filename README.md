@@ -1,3 +1,7 @@
+## Problem Statement
+
+## Requirements 
+
 ### Organizations and Basic Information:
 
 * Organizations are identified by Organization_ID and store details including name, address (street, city), contact person, and phone number.
@@ -17,3 +21,7 @@
 * One designated organizer from the managing organization must serve as event manager, with the possibility of managing multiple events.
 * Venue records must include detailed facilities information such as available rooms, equipment, and room-specific capacity limits.
 * Financial tracking requires recording all event-related transactions (ticket sales, sponsorship payments) with Transaction_ID, date, amount, and transaction type.
+
+## ER Diagram
+
+![1732440198077](imgs/er-diagram.png)

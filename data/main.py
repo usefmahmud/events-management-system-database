@@ -14,3 +14,15 @@ with open('events_copy.csv', 'w', encoding='utf8') as file:
     writer.writeheader()
     writer.writerows(events)
     print(len(events))
+
+'''
+user [in progress]
+speaker [in progress]
+venue [done]
+sponsor [done] 
+organization [done]
+event [done]
+event_speaker
+event_sponsor
+user_attend
+'''

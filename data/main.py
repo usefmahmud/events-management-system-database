@@ -222,8 +222,62 @@ def create_event_speaker():
         writer.writerows(exported_data)
     print(len(exported_data))
 
-create_event_speaker()
+def creater_event_sponsor():
+    exported_data = []
 
+    events_file = open('event.csv', 'r', encoding='utf8')
+    events = list(csv.DictReader(events_file))
+
+    sponsors_file = open('sponsors.csv', 'r', encoding='utf8')
+    sponsors = list(csv.DictReader(sponsors_file))
+
+    sponsorship_amounts = [
+        [10000, 15000, 20000],
+        [30000, 40000, 50000],
+        [5000, 7500, 15000],
+        [15000, 20000, 30000],
+        [13000, 17000, 25000],
+        [60000],
+        [150000]
+    ]
+
+    i = 1
+    for event in events:
+        random_sample_sponsors = random.sample(sponsors, random.randint(0, 13))
+        chosen_sponsorship = random.choice(sponsorship_amounts)
+
+        for sponsor in random_sample_sponsors:
+            amount = random.choice(chosen_sponsorship)
+            sponsorship_type = ''
+
+            if len(chosen_sponsorship) == 1:
+                sponsorship_type = 'Gold'
+            else:
+                if amount == chosen_sponsorship[0]:
+                    sponsorship_type = 'Bronze'
+                elif amount == chosen_sponsorship[1]:
+                    sponsorship_type = 'Silver'
+                elif amount == chosen_sponsorship[2]:
+                    sponsorship_type = 'Gold'
+
+            exported_data.append({
+                'id': i,
+                'sponsor_id': sponsor['sponsor_id'],
+                'event_id': event['event_id'] ,
+                'amount': amount,
+                'sponsorship_type': sponsorship_type
+            })
+
+        i += 1
+    
+    with open('event_sponsor.csv', 'w', encoding='utf8') as file:
+        writer = csv.DictWriter(file, fieldnames=[
+            'id', 'sponsor_id', 'event_id', 'amount', 'sponsorship_type'
+        ])
+        writer.writeheader()
+        writer.writerows(exported_data)
+    print(len(exported_data))
+creater_event_sponsor()
 '''
 user [done]
 speaker [done]
@@ -231,7 +285,7 @@ venue [done]
 sponsor [done] 
 organization [done]
 event [done]
-event_speaker
-event_sponsor
-user_attend
+event_speaker [done]
+event_sponsor [done]
+user_attend [done]
 '''

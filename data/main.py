@@ -220,7 +220,7 @@ def create_event_speaker():
         writer.writeheader()
         writer.writerows(exported_data)
     print(len(exported_data))
-create_event_speaker()
+# create_event_speaker()
 
 def creater_event_sponsor():
     exported_data = []

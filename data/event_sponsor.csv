@@ -1,3 +1,4 @@
+id,sponsor_id,event_id,amount,sponsorship_type
 1,6,1,13000,Bronze
 2,7,1,13000,Bronze
 3,15,1,25000,Gold

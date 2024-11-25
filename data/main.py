@@ -211,9 +211,8 @@ def create_event_speaker():
                 'presentation_titles': random.choice(presentation_titles[speaker['expertise']]),
                 'stage_order': order
             })
-        i += 1
-        order += 1
-
+            i += 1
+            order += 1
     with open('event_speaker.csv', 'w', encoding='utf8') as file:
         writer = csv.DictWriter(file, fieldnames=[
             'id', 'speaker_id', 'event_id', 'presentation_titles', 'stage_order'
@@ -221,6 +220,7 @@ def create_event_speaker():
         writer.writeheader()
         writer.writerows(exported_data)
     print(len(exported_data))
+create_event_speaker()
 
 def creater_event_sponsor():
     exported_data = []
@@ -268,7 +268,7 @@ def creater_event_sponsor():
                 'sponsorship_type': sponsorship_type
             })
 
-        i += 1
+            i += 1
     
     with open('event_sponsor.csv', 'w', encoding='utf8') as file:
         writer = csv.DictWriter(file, fieldnames=[
@@ -277,7 +277,7 @@ def creater_event_sponsor():
         writer.writeheader()
         writer.writerows(exported_data)
     print(len(exported_data))
-creater_event_sponsor()
+# creater_event_sponsor()
 '''
 user [done]
 speaker [done]

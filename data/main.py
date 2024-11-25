@@ -78,16 +78,15 @@ def create_user_attend():
         max_users = round(random_percentage * int(event_max_attendees))
         chosen_list_tickets = random.choice(list_of_tickets)
 
-        event_start, event_end = event['start_date'], event['end_date']
-        after_start_prob = True if random.random() <= .15 else False
-        random_date = ''
-        if after_start_prob:
-            random_date = get_random_date(event_start, event_end)
-        else:
-            random_date = get_random_date_before(event_start, random.randint(1, 30))
-
         users_random_sample = random.sample(users, min(len(users), max_users))
         for user in users_random_sample:
+            after_start_prob = True if random.random() <= .15 else False
+            random_date = ''
+            if after_start_prob:
+                random_date = get_random_date(event['start_date'], event['end_date'])
+            else:
+                random_date = get_random_date_before(event['start_date'], random.randint(1, 30))
+
             random_attend_status = 'accepted' if random.random() < .8 else 'rejected'
             exported_data.append({
                 'id': i,
@@ -110,7 +109,7 @@ def create_user_attend():
         writer.writeheader()
         writer.writerows(exported_data)
     print(len(exported_data))
-
+create_user_attend()
 def create_event_speaker():
     presentation_titles = {
         "Technology": [

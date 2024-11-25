@@ -22,7 +22,9 @@
 
 ## ER Diagram
 
-![1732440198077](imgs/er-diagram.png "ER Diagram")
+![er-diagram](imgs/er-diagram.png "ER Diagram")
 
 ## Relational Model
-<iframe width="560" height="315" src='https://dbdiagram.io/e/6742223ce9daa85aca7abb35/6743bd81e9daa85aca8d7d5e'> </iframe>
+
+![relational-model](imgs/relational-model.png "Relational Model")
+[View on dbdiagram.io](https://dbdiagram.io/d/6742223ce9daa85aca7abb35)

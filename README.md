@@ -1,4 +1,6 @@
-## Problem Statement
+## Description
+During this semester, I organized and delivered an interactive session on Database Management Systems (DBMS) for my college colleagues. 
+The lecture covered core concepts like understanding business requirements, relational schemas, and SQL query construction included hands-on exercises to reinforce understanding.
 
 ## Requirements
 
